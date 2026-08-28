@@ -122,6 +122,10 @@
   .row span{color:var(--muted);font-size:.96rem}
 
   /* events split image band */
+  .spread{padding-top:0}
+  .spread .edge{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.4vw,1.6rem)}
+  .spread figure{margin:0;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3}
+  .spread img{width:100%;height:100%;object-fit:cover}
   .events .edge{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
   .events.rev .events-media{order:2}
   .events-media{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;box-shadow:0 34px 66px -38px oklch(0.2 0.02 132 / .55)}
@@ -174,6 +178,7 @@
 
   @media(max-width:1000px){
     .offer .edge,.events .edge,.visit .edge{grid-template-columns:1fr}
+    .spread .edge{grid-template-columns:1fr}
     .events.rev .events-media{order:0}
     .offer-media{aspect-ratio:16/10;max-height:420px}
   }
@@ -270,9 +275,16 @@
   </div>
 </section>
 
+<section class="block spread">
+  <div class="edge">
+    <figure class="reveal"><img src="img/catering-wraps-board.webp" alt="A board of filled wraps cut and set out ready for a function" loading="lazy"></figure>
+    <figure class="reveal"><img src="img/catering-wraps-platter.webp" alt="A round platter of rice paper rolls arranged around a dipping sauce" loading="lazy"></figure>
+  </div>
+</section>
+
 <section class="block events" id="events">
   <div class="edge">
-    <div class="events-media reveal"><img src="img/function-room.webp" alt="The function room dressed for an evening event, with long tables set beside the stone fireplace" loading="lazy"></div>
+    <div class="events-media reveal"><img src="img/meeting-room.webp" alt="The Beechwoods meeting room set up with a long table, whiteboard and large screen TV" loading="lazy"></div>
     <div class="reveal">
       <span class="eyebrow">Events &amp; meetings</span>
       <h2>A private space that works.</h2>
